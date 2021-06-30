@@ -1,0 +1,74 @@
+%centerItems {
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.mainWrapper {
+  @extend %centerItems;
+  height: 100vh;
+}
+
+.wrapper {
+  width: 80%;
+  max-width: 800px;
+  height: 50%;
+}
+
+
+.myKeyboard {
+  @extend %centerItems;
+  flex-direction: column;
+}
+
+.row {
+  @extend %centerItems;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+
+  .shift {
+    flex-basis: 25%;
+  }
+  .space {
+    flex-basis: 80%;
+  }
+}
+
+.row3 {
+  .btn:first-child, .fakebtn {
+    text-align: center;
+  }
+}
+
+.btn, .fakebtn {
+  @extend %centerItems;
+  height: 50px;
+  flex-basis: 15%;
+  border: 1px solid black;
+  border-radius: 10px;
+  &:not(:first-child) {
+    margin-left: 8px;
+  }
+}
+
+.btnNeedsToClick {                         //
+  color:green;
+  animation: needsToClick 0.3s infinite;
+  @keyframes needsToClick {
+    0% {transform: scale(1)}
+    50% {transform: scale(1.15)}
+    100% {transform: scale(1)}
+  }
+}
+
+.btnClicked {
+  animation: clicked 0.3s infinite;
+  animation-iteration-count: 1;
+  @keyframes clicked {
+    0% {transform: scale(1)}
+    50% {transform: scale(1.1)}
+    100% {transform: scale(1)}
+  }
+}

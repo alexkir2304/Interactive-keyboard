@@ -1,0 +1,59 @@
+.mainWrapper, .myKeyboard, .row, .btn, .fakebtn {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.mainWrapper {
+  height: 100vh; }
+
+.wrapper {
+  width: 80%;
+  max-width: 800px;
+  height: 50%; }
+
+.myKeyboard {
+  flex-direction: column; }
+
+.row {
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px; }
+  .row .shift {
+    flex-basis: 25%; }
+  .row .space {
+    flex-basis: 80%; }
+
+.row3 .btn:first-child, .row3 .fakebtn {
+  text-align: center; }
+
+.btn, .fakebtn {
+  height: 50px;
+  flex-basis: 15%;
+  border: 1px solid black;
+  border-radius: 10px; }
+  .btn:not(:first-child), .fakebtn:not(:first-child) {
+    margin-left: 8px; }
+
+.btnNeedsToClick {
+  color: green;
+  animation: needsToClick 0.3s infinite; }
+@keyframes needsToClick {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.15); }
+  100% {
+    transform: scale(1); } }
+.btnClicked {
+  animation: clicked 0.3s infinite;
+  animation-iteration-count: 1; }
+@keyframes clicked {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+
+/*# sourceMappingURL=styles.css.map */
