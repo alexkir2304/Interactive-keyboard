@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap');
+
+
 %centerItems {
   display: flex;
   justify-content: center;
@@ -13,14 +16,22 @@
   width: 80%;
   max-width: 800px;
   min-height: 50%;
+  color: #390099;
+  font-family: 'Prompt', sans-serif;
 }
 
+.header {
+  //text-align: center;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
 
 .myKeyboard {
   @extend %centerItems;
   flex-direction: column;
   background: linear-gradient(#90f1ef, #ffd6e0);
   border-radius: 10px;
+
 }
 
 .row {
@@ -59,7 +70,7 @@
 }
 
 .btnNeedsToClick {                         //
-  color:green;
+  //color:green;
   animation: needsToClick 0.3s infinite;
   @keyframes needsToClick {
     0% {transform: scale(1)}

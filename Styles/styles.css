@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap");
 .mainWrapper, .myKeyboard, .row, .btn, .fakebtn {
   display: flex;
   justify-content: center;
@@ -9,7 +10,13 @@
 .wrapper {
   width: 80%;
   max-width: 800px;
-  min-height: 50%; }
+  min-height: 50%;
+  color: #390099;
+  font-family: 'Prompt', sans-serif; }
+
+.header {
+  font-size: 40px;
+  margin-bottom: 40px; }
 
 .myKeyboard {
   flex-direction: column;
@@ -40,7 +47,6 @@
     margin-left: 8px; }
 
 .btnNeedsToClick {
-  color: green;
   animation: needsToClick 0.3s infinite; }
 @keyframes needsToClick {
   0% {
