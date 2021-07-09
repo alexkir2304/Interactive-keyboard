@@ -12,13 +12,15 @@
 .wrapper {
   width: 80%;
   max-width: 800px;
-  height: 50%;
+  min-height: 50%;
 }
 
 
 .myKeyboard {
   @extend %centerItems;
   flex-direction: column;
+  background: linear-gradient(#90f1ef, #ffd6e0);
+  border-radius: 10px;
 }
 
 .row {
@@ -26,7 +28,9 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  margin-top: 10px;
+  &:not(:first-child) {
+    margin-top: 10px;
+  }
 
   .shift {
     flex-basis: 25%;
@@ -48,6 +52,7 @@
   flex-basis: 15%;
   border: 1px solid black;
   border-radius: 10px;
+  opacity: 0.7;
   &:not(:first-child) {
     margin-left: 8px;
   }
