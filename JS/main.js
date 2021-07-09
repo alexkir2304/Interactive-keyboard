@@ -58,6 +58,9 @@ function pressKey() {
             item.classList.remove('btnClicked');
         }
 
+        setTimeout(() => {
+            item.classList.remove('btnClicked')
+        }, 300)
         // catching pulsing button
         if (pressedKey === activeKey.innerHTML){
 

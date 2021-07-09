@@ -64,8 +64,10 @@
 }
 
 .btnClicked {
+  //background-color: green;
   animation: clicked 0.3s infinite;
   animation-iteration-count: 1;
+
   @keyframes clicked {
     0% {transform: scale(1)}
     50% {transform: scale(1.1)}
