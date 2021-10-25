@@ -30,6 +30,11 @@ getRandomKey();
 document.addEventListener('keydown', (event) => {
     pressedKey = event.key;
 
+    if (pressedKey === '/') {
+        event.preventDefault();
+        pressedKey = '';
+    }
+
     pressKey();
     console.log(`pressedKey = ${pressedKey}`);
 });
